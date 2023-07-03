@@ -31,10 +31,6 @@ class GFG{
 
 class Solution{
     static double switchCase(int choice, List<Double> arr){
-         switch(choice){
-             case 1: return Math.PI*(Math.pow(arr.get(0),2));
-             case 2: return (arr.get(0)*arr.get(1));
-             default: return 0;
-         }
+        return (choice==2)?(arr.get(0)*arr.get(1)):Math.PI*(Math.pow(arr.get(0),2));
     }
 }
