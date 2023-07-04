@@ -21,17 +21,13 @@ class Main {
 class Solution {
 
     void printTriangle(int n) {
-        for(int i=0;i<n;i++){
-            for(int j=0;j<=i;j++){
+        for(int i=0;i<2*n-1;i++){
+            int s = i;
+            if(i>n-1){ s = 2*n-i-2;}
+            for(int j=0;j<=s;j++){
                 System.out.print("* ");
             }
             System.out.println();
-        }
-        for(int i=1;i<n;i++){
-            for(int j=1;j<=n-i;j++){
-                System.out.print("* ");
-            }
-           System.out.println();
         }
     }
 }
