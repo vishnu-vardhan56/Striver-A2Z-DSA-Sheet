@@ -10,9 +10,9 @@ class Solution {
             if(nums[mid]==nums[low] && nums[mid]==nums[high]){
                 low = low+1;
                 high = high-1;
-                continue;
+                
             }
-            if(nums[low]<=nums[mid]){
+            else if(nums[low]<=nums[mid]){
                 if(nums[low]<=k && k<=nums[mid]){
                     high = mid-1;
                 }
