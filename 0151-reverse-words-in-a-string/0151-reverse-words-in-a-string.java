@@ -1,12 +1,33 @@
 class Solution {
     public String reverseWords(String str) {
-        str =  str.trim();
-		String s[] = str.split(" ");
-		String res = "";
-		for(int i=s.length-1;i>=0;i--){
-			 if(s[i].length()!=0){res+=s[i].trim()+" ";}
-		}
-		res= res.trim();
-		return res;
+        String s = "";
+        String temp = "";
+        int i = 0;
+        int j = str.length();
+        while(i<j){
+            char ch = str.charAt(i);
+            if(ch!=' '){
+                temp+=ch;
+            }
+            else if(temp!=""){
+                if(!s.equals("")){
+                    s = temp + " " + s;
+                }
+                else{
+                    s+=temp;
+                }
+                temp="";
+            }
+            i++;
+        }
+        if(temp!=""){
+            if(!s.equals("")){
+                s = temp + " " + s;
+            }
+            else{
+                s+=temp;
+            }
+        }
+        return s;
     }
 }
