@@ -88,18 +88,17 @@ class GfG
 {
     Node deleteNode(Node head, int x)
     {
-	    Node temp = head.next;
-	    Node prev = head;
+	    Node temp = head;
+	   
 	    if(x==1){
 	        return head.next;
 	    }
-	    int count = 2;
-	    while(temp.next!=null && x!=count){
+	    int i=1;
+	    while(i<x-1){
 	        temp = temp.next;
-	        prev = prev.next;
-	        count+=1;
+	        i+=1;
 	    }
-	    prev.next = temp.next;
+	    temp.next = temp.next.next;
 	    return head;
     }
 }
